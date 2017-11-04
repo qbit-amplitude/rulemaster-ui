@@ -25,7 +25,9 @@ $(document).ready(function(){
         type: "POST",
         url: "http://52.77.80.70/api/v1/"+rulesetname+"/definition",
         data: JSON.stringify(obj),
-        success: function(json) { console.log(json); alert(json); console.log(json)}
+        success: function(json) {
+            console.log(JSON.parse(json))
+        }
 
         });
 
