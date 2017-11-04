@@ -22,10 +22,12 @@ $(document).ready(function(){
 
         $.post({
         url: "http://52.77.80.70:5000/api/v1"+rulesetname+"/definition"
-        data = JSON.stringify(obj)
+        data: JSON.stringify(obj)
         })
         .done(function (resp, text, jqxhr){
 
+                console.log(resp);
+                alert(resp);
             })
 
         .fail(function () {
