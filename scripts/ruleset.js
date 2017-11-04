@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 
         $.post({
-        url: "http://localhost:5000/"+rulesetname+"/definition"
+        url: "http://52.77.80.70:5000/api/v1"+rulesetname+"/definition"
         data = JSON.stringify(obj)
         })
         .done(function (resp, text, jqxhr){
