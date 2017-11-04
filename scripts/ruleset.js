@@ -10,7 +10,9 @@ $(document).ready(function(){
 
         var obj= {}
         if (ruleset_type == 'state'){
-            obj[rulesetname+'$state'] = rule;
+            rulesetname = rulesetname+'$state';
+            obj[rulesetname] = rule;
+            }
         else if (ruleset_type == 'None') {
             obj[rulesetname] =   rule;
         }
@@ -19,7 +21,8 @@ $(document).ready(function(){
 
 
         $.post({
-        url: ""
+        url: "http://localhost:5000/"+rulesetname+"/definition"
+        data = JSON.stringify(obj)
         })
         .done(function (resp, text, jqxhr){
 
