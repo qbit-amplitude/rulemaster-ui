@@ -1,0 +1,79 @@
+<html>
+ <head>
+  <title>RuleMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="styles/global.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+ </head>
+
+ <body>
+
+   <div id="header" >
+    <div class="logo"><a href="#">Rule<span>Master</span></a></div>
+   </div>
+
+   <div id="container">
+    <div class="sidebar">
+      <ul id="nav">
+       <li><a class="selected" href="index.html">Dashboard</a></li>
+       <li><a href="#">Profiles</a></li>
+       <li><a href="ruleset.html">Create RuleSets</a></li>
+       <li><a href="#">Testing</a></li>
+       <li><a href="#">Versions</a></li>
+       <li><a href="#">History</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>Create Ruleset</h1>
+
+      <div id="ruleset">
+        <form id = "rulesetform">
+              <div class="form-group">
+                <label for="rulesetname">Ruleset</label>
+                <input type="text" class="form-control" id="rulesetname" aria-describedby="rulesetname" placeholder="Enter Ruleset Name">
+              </div>
+                <div class="form-group">
+                    <label for="ruleset_type">Ruleset type</label>
+                        <select class="form-control" id="ruleset_type">
+                          <option>None</option>
+                          <option>state</option>
+                          <option>flow</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="operator">Match</label>
+                        <select class="form-control" id="operator">
+                          <option>all</option>
+                          <option>any</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                <label for="condition">Ruleset</label>
+                <input type="text" class="form-control" id="condition" aria-describedby="condition" placeholder="Condition">
+              </div>
+                <div class="form-group">
+                <label for="Action">Ruleset</label>
+                <input type="text" class="form-control" id="action" aria-describedby="action" placeholder="action">
+              </div>
+
+
+            <button type="button" id="saveRuleset" class="btn btn-info btn-lg" >Create Ruleset</button>
+        </form>
+      </div>
+
+
+
+
+
+    </div> <!-- end of content !-->
+   </div> <!-- end of container !-->
+
+<script src="scripts/jquery.js"></script>
+ <script  src="scripts/ruleset.js"></script>
+
+
+ </body>
+</html>

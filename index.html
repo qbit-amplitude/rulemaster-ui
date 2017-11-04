@@ -1,0 +1,50 @@
+
+<html>
+ <head>
+  <title>RuleMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="styles/global.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+ </head>
+
+ <body>
+
+   <div id="header" >
+    <div class="logo"><a href="#">Rule<span>Master</span></a></div>
+   </div>
+
+   <div id="container">
+    <div class="sidebar">
+      <ul id="nav">
+       <li><a class="selected" href="#">Dashboard</a></li>
+       <li><a href="#">Profiles</a></li>
+       <li><a href="#">Rule Sets</a></li>
+       <li><a href="#">Testing</a></li>
+       <li><a href="#">Versions</a></li>
+       <li><a href="#">History</a></li>
+      </ul>
+    </div> 
+    <div class="content">
+      <h1>Dashboard</h1>
+      <p>No rules created! Click below to create a ruleset</p>
+
+      <!--<div id="box">-->
+        <!--<div class="box-top">News</div>-->
+        <!--<div class="box-panel secondary" >This is some news</div>-->
+      <!--</div>-->
+
+      <div align="center">
+          <button type="submit" id="createRuleset" class="btn btn-info btn-lg" onclick="location.href='ruleset.html'">Create Ruleset</button>
+      </div>
+
+    </div> <!-- end of content !-->
+   </div> <!-- end of container !-->
+
+
+ <script  src="scripts/dashboard.js"></script>
+ <script src="scripts/jquery.js"></script>
+
+ </body>
+</html>
