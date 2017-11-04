@@ -19,12 +19,12 @@ $(document).ready(function(){
 
 
         console.log(obj);
-        data= JSON.stringify(obj)
+
 
         $.ajax({
         type: "POST",
-        url: "http://52.77.80.70:5000/api/v1"+rulesetname+"/definition",
-        data: data,
+        url: "http://52.77.80.70/api/v1"+rulesetname+"/definition",
+        data: JSON.stringify(obj),
         success: function(json) { console.log(json); alert(json); console.log(json)}
 
         });
