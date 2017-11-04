@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //save ruleset on click
-    $('#saveRuleset').on('click', function(){
+    $('#saveRuleset').click(function(){
 
         var rulesetname = $('#rulesetname').val();
         var ruleset_type = $('#ruleset_type').val();
@@ -17,23 +17,18 @@ $(document).ready(function(){
             obj[rulesetname] =   rule;
         }
 
+
         console.log(obj);
+        data= JSON.stringify(obj)
 
+        $.ajax({
+        type: "POST",
+        url: "http://52.77.80.70:5000/api/v1"+rulesetname+"/definition",
+        data: data,
+        success: function(json) { console.log(json); alert(json); console.log(json)}
 
-        $.post({
-        url: "http://52.77.80.70:5000/api/v1"+rulesetname+"/definition"
-        data: JSON.stringify(obj)
-        })
-        .done(function (resp, text, jqxhr){
-
-                console.log(resp);
-                alert(resp);
-            })
-
-        .fail(function () {
-            //window.location.replace(redirect_path);
-            console.log('Health check failed');
         });
+
 
     });
 
