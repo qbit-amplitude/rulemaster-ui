@@ -4,23 +4,22 @@ $(document).ready(function(){
 
         var rulesetname = $('#rulesetname').val();
         var ruleset_type = $('#ruleset_type').val();
-        var operator = $('#operator').val();
-        var condition = $('#condition').val();
-        var action = $('#action').val();
-        console.log(JSON.parse('{'+condition+'}'));
+        var rule = $('#rule').val();
+        rule = JSON.parse(rule);
+
 
         var obj= {}
         if (ruleset_type == 'state'){
-            obj[rulesetname+'$state'] = {"start" : {operator: [{"m":JSON.parse('{'+condition+'}')}],run:action}} }
+            obj[rulesetname+'$state'] = rule;
         else if (ruleset_type == 'None') {
-            obj[rulesetname] =  {"start" : {operator: [{"m":JSON.parse('{'+condition+'}')}],run:action}}
+            obj[rulesetname] =   rule;
         }
 
         console.log(obj);
 
 
         $.post({
-        url: null
+        url: ""
         })
         .done(function (resp, text, jqxhr){
 
